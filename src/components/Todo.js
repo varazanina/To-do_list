@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./todo.css";
 
 function TodoApp() {
   /* todos is an array that stores all the tasks */
@@ -32,9 +33,10 @@ function TodoApp() {
 
   return (
     <div className='todoApp'>
+      <div className='todo-container'>
       <h1>Todo List</h1>
       <div>
-        <input
+        <input className='input-container'
           type="text"
           placeholder="Add a new task"
           value={task}
@@ -44,9 +46,9 @@ function TodoApp() {
           `e.target.value` retrieves the current value of the input element*/
           onChange={(e) => setTask(e.target.value)}
         />
-        <button onClick={addTodo}>Add</button>
+        <button className='add-button' onClick={addTodo}>Add</button>
       </div>
-      <ul>
+      <ul className='todo-list'>
         {todos.map((todo, index) => (
           <li key={index}>
             <input
@@ -55,10 +57,11 @@ function TodoApp() {
               onChange={() => toggleTodo(index)}
             />
             {todo.completed ? <del>{todo.text}</del> : todo.text}
-            <button onClick={() => removeTodo(index)}>Remove</button>
+            <button className='remove-button' onClick={() => removeTodo(index)}>Remove</button>
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 }

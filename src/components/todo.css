@@ -1,0 +1,35 @@
+.todoApp {
+    text-align: center;
+    margin: auto;
+    width: 300px;
+  }
+  
+  .todo-container {
+    text-align: left;
+  }
+  
+  .add-button,
+  .remove-button {
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-button:hover,
+  .remove-button:hover {
+    background-color: #7b68ee; /* Darker shade of purple on hover */
+  }
+  
+  .todo-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    align-items: center;
+    margin-bottom: 5px;
+  }
